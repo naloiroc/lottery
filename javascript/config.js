@@ -1,5 +1,5 @@
 ﻿var info = {
-	act_name: "年終感恩餐會",
+	act_name: "60 週年校慶 校友之夜",
 	output_filename: "fatboy_result.csv",
 	can_back_if_not_appear: false,
 	restore_key: new Date().toString().split(' ').join('').substr(3, 9)
