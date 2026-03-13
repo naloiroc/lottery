@@ -1,0 +1,68 @@
+@include keyframes(vr_result) {
+    0%,80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.drawmode-vr {
+    position: relative;
+    .vr-main {
+        background-image: url(../images/vr_bg.gif);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        canvas, .vr-focus {
+            display: none;
+            .vring & {
+                display: block;
+            }
+        }
+        &:after {
+            content: '目前位於 VR 模式下，\A調整眼鏡上方旋鈕\A可以讓畫面更加清楚';
+            display: block;
+            background: white;
+            padding: 0.5em;
+            box-sizing: border-box;
+            position: absolute;
+            color: black;
+            line-height: 1.4em;
+            text-align: left;
+            font-size: 1vmin;
+            right: 15%; bottom: 25%;
+            width: 40%;
+            .vring & {
+                display: none;
+            }
+        }
+    }
+}
+.vr-result {
+    position: absolute;
+    z-index: 30;
+    font-size: 24px;
+    background: rgba(black, 0.4);
+    color: white;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 40vmin;
+    left: calc(50% - 20vmin);
+    top: 40%;
+    line-height: 6vmin;
+    text-shadow: 0 0 10px black;
+    animation: vr_result 3s 1 forwards;
+    &.inactive {
+        display: none;
+        animation: none;
+    }
+    .drawmode-group {
+        font-size: 5vmin;
+    }
+    .drawmode-name, .drawmode-sn {
+        font-size: 5vmin;
+        text-shadow: none;
+    }
+}
