@@ -585,7 +585,7 @@ $.when(
             if(that.under_auto_draw) {
                 setTimeout(function(){
                     that.autoDraw(that.deferred);
-                }, 10);
+                }, 500);
             }
             return that.deferred.promise().then(function(user){
                 that.deferred = null;  //清空前一次的抽獎流程
