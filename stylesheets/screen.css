@@ -484,8 +484,9 @@ body.bomb-self:before, body.bomb-other:before {
   position: relative;
   background-image: url(../images/bg.png);
   background-position: 0 60px;
-  width: 1024px;
-  height: 768px;
+  /* width: 1024px; */
+  /* height: 768px; */
+  height: 100vh;
   overflow: hidden;
   box-shadow: 0 0 10px #541515;
 }
@@ -1288,6 +1289,8 @@ body.bomb-self:before, body.bomb-other:before {
   overflow: hidden;
   height: 610px;
   background-image: url(../images/main_bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* line 844, ../sass/screen.scss */
